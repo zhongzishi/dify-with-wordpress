@@ -2,7 +2,7 @@ version: '3'
 services:
   # API service
   api:
-    image: langgenius/dify-api:0.6.4
+    image: langgenius/dify-api:0.6.7
     restart: always
     env_file:
       - ./config/api.env
@@ -20,7 +20,7 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: langgenius/dify-api:0.6.4
+    image: langgenius/dify-api:0.6.7
     restart: always
     env_file:
       - ./config/worker.env
@@ -34,7 +34,7 @@ services:
 
   # Frontend web application.
   web:
-    image: langgenius/dify-web:0.6.4
+    image: langgenius/dify-web:0.6.7
     restart: always
     environment:
       EDITION: SELF_HOSTED
